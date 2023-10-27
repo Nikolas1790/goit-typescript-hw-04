@@ -5,12 +5,10 @@
 
 import React, { useState } from 'react';
 
-// type HandleChange = (event)=> any
-
 export function FormComponent() {
   const [value, setValue] = useState("");
 
-  const handleChange:HandleChange = (event) => {
+  const handleChange = (event:React.ChangeEvent<HTMLInputElement>) => {
     setValue(event.target.value);
   };
 
@@ -18,3 +16,5 @@ export function FormComponent() {
     <input type="text" value={value} onChange={handleChange} />
   );
 }
+
+
